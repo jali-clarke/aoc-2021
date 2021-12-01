@@ -13,3 +13,8 @@ spec = describe "day 01" $ do
             let
                 day01Example = [199, 200, 208, 210, 200, 207, 240, 269, 260, 263]
             in signalIncreaseCount day01Example `shouldBe` 7
+    describe "signalIncreaseCountSliding" $ do
+        it "should return 5 when given the example" $
+            let
+                day01Example = [199, 200, 208, 210, 200, 207, 240, 269, 260, 263]
+            in signalIncreaseCountSliding day01Example `shouldBe` 5
