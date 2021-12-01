@@ -3,4 +3,7 @@ module Day01 (
 ) where
 
 signalIncreaseCount :: [Int] -> Int
-signalIncreaseCount _ = 0
+signalIncreaseCount sigs =
+    case sigs of
+        x : y : rest -> (if y > x then 1 else 0) + signalIncreaseCount (y : rest)
+        _ -> 0
